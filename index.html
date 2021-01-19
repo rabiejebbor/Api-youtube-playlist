@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://getbootstrap.com/docs/4.3/assets/css/docs.min.css"
+    />
+  </head>
+
+  <body
+    style="
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: rgb(2, 0, 36);
+      background: radial-gradient(
+        circle,
+        rgba(2, 0, 36, 1) 36%,
+        rgba(9, 9, 121, 1) 76%,
+        rgba(0, 140, 168, 1) 100%
+      );
+    "
+  >
+    <div
+      class="container bg-dark text-white p-3 text-center"
+      style="
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      "
+    >
+      <div class="row justify-content-center align-items-center">
+        <label for="link" class="m-3 col-3">Playlist link</label>
+        <input type="text" id="link" class="m-3 col-5" />
+        <div class="spinner"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="m-3 col-3"></div>
+        <button class="btn btn-primary col-5 m-3" id="saveBtn">
+          Generate data
+        </button>
+      </div>
+      <div class="row justify-content-center align-items-center mt-2">
+        <div class="m-3 col-3"></div>
+        <button
+          class="btn btn-primary m-2 col-5"
+          id="signin-button"
+          onclick="handleSignInClick()"
+          disabled="true"
+        >
+          Sign in & Save
+        </button>
+        <!-- <button
+          class="btn btn-primary m-2 col-3"
+          id="signout-button"
+          onclick="handleSignOutClick()"
+        >
+          Sign out
+        </button> -->
+        <div class="saved"></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script
+      async
+      defer
+      src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
